@@ -1,0 +1,39 @@
+<div class="sidenav-example">
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened>
+      <mat-list role="list">
+        <mat-list-item>
+          <img class="app-logo" src="assets/LOGO.svg" alt="logo" />
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
+
+      <mat-nav-list>
+        <mat-list-item id="app__list-item-demo" routerLink="/demo">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <span matLine>DEMO</span>
+        </mat-list-item>
+      </mat-nav-list>
+
+      <mat-nav-list>
+        <mat-list-item id="app__list-item-best-practice-ci" routerLink="/best-practices-ci">
+          <mat-icon mat-list-icon>stars</mat-icon>
+          <span matLine>BUENAS PRACTICAS CI</span>
+        </mat-list-item>
+      </mat-nav-list>
+
+      <mat-nav-list>
+        <mat-list-item id="app__list-item-switch" routerLink="/switch">
+          <mat-icon mat-list-icon>wb_incandescent</mat-icon>
+          <span matLine>INTERRUPTOR</span>
+        </mat-list-item>
+      </mat-nav-list>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet>
+      </router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

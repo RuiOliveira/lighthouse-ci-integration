@@ -1,0 +1,26 @@
+<div class="best-practices-ci__content">
+  <h1 class="best-practices-ci__icon-complete">BUENAS PRACTICAS CI</h1>
+  <mat-nav-list>
+    <mat-list-item
+      *ngFor="let item of checkList"
+      id="best-practices-ci__item-check-{{ item.id }}"
+    >
+      <mat-checkbox
+        id="best-practices-ci__check-{{ item.id }}"
+        [(ngModel)]="item.checked"
+        (change)="onChangeCheck()"
+      >
+        {{ item.id }}. {{ item.name }}
+      </mat-checkbox>
+    </mat-list-item>
+  </mat-nav-list>
+
+  <div
+    id="best-practices-ci__section-icon"
+    *ngIf="allChecked()"
+    class="best-practices-ci__icon-complete"
+  >
+    <mat-icon>check_circle_outline</mat-icon>
+    CI/CD Completado
+  </div>
+</div>

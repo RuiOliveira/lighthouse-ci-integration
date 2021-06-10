@@ -1,0 +1,20 @@
+{
+  "name": "lighthouse-ci-integration",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "Lighthouse CI Integration",
+  "author": "EDICOM",
+  "license": "EDICOM 2021",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "prod": "pm2-docker start ecosystem.config.js"
+  },
+  "allLocales": ["es"],
+  "dependencies": {
+    "pm2": "^2.10.2",
+    "express": "^4.16.3",
+    "kube-probe": "^0.3.1",
+    "ng-mask": "^3.1.1",
+    "swagger-ui-express": "^4.1.1"
+  }
+}

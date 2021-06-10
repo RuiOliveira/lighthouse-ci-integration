@@ -1,0 +1,25 @@
+:host {
+  .best-practices-ci__content {
+    margin-left: 20px;
+  }
+
+  .best-practices-ci__icon-complete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mat-icon {
+    height: 60px;
+    width: 60px;
+  }
+
+  .material-icons {
+    font-size: 60px;
+  }
+
+  .mat-list-base .mat-list-item {
+    height: 40px;
+  }
+}
