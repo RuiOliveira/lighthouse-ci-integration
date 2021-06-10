@@ -1,4 +1,4 @@
-image: afmartin3z/lighthouse:latest
+image: edicom/lighthouse:latest
 
 variables:
   URL: lighthouse-server-url
@@ -7,19 +7,19 @@ variables:
 stages:
   - report
 
-# review_report:
-#   stage: report
-#   image: afmartin3z/lighthouse:latest
-#   script:
-#     - echo $URL
-#     - lhci autorun --upload.target="lhci" --upload.token="$LHCI_TOKEN" --upload.serverBaseUrl="URL" --collect.url="$URL" --collect.settings.chromeFlags="--no-sandbox --headless --ignore-certificate-errors" --assert.preset="lighthouse:recommended" || exit 1
-#   allow_failure: true
-#   rules:
-#     - if: "$CI_COMMIT_REF_NAME !~ /master/"
+review_report:
+  stage: report
+  image: edicom/lighthouse:latest
+  script:
+    - echo $URL
+    - lhci autorun --upload.target="lhci" --upload.token="$LHCI_TOKEN" --upload.serverBaseUrl="URL" --collect.url="$URL" --collect.settings.chromeFlags="--no-sandbox --headless --ignore-certificate-errors" --assert.preset="lighthouse:recommended" || exit 1
+  allow_failure: true
+  rules:
+    - if: "$CI_COMMIT_REF_NAME !~ /master/"
 
 static_review_report:
   stage: report
-  image: afmartin3z/lighthouse:latest
+  image: edicom/lighthouse:latest
   script:
     - npm install
     - npm run build
