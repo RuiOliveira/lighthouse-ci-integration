@@ -1,9 +1,8 @@
 image: afmartin3z/lighthouse:latest
 
 variables:
-  URL: https://0cf407e28655.ngrok.io
+  URL: lighthouse-server-url
   LHCI_TOKEN: 587acafb-8a01-4aa1-9e0c-d902c661b10a
-  URL:
 
 stages:
   - report
