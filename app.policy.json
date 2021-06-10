@@ -1,0 +1,6 @@
+{
+  "csp": {
+    "enable": true,
+    "value": "default-src 'self' 'unsafe-inline'; object-src 'self' blob:; script-src 'self' 'unsafe-eval' 'unsafe-inline' ; img-src 'self' data:; worker-src blob: ; connect-src 'self' 127.0.0.1:* ;"
+  }
+}

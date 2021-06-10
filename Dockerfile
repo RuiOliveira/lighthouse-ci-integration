@@ -12,10 +12,11 @@ WORKDIR /usr/src/app
 RUN pwd
 
 # Install app dependencies
+COPY app.policy.json /usr/src/app/app.policy.json
 COPY package.docker.json /usr/src/app/package.json
 COPY ecosystem.config.js /usr/src/app/ecosystem.config.js
 COPY server.js /usr/src/app/server.js
-COPY app.policy.json /usr/src/app/app.policy.json
+
 RUN npm install
 
 # Bundle app source
